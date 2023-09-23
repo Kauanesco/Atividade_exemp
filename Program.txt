@@ -1,0 +1,20 @@
+﻿using System;
+using System.Globalization;
+namespace ArquivoParaAtividades;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double Peso;
+        double Altura;
+
+
+        Console.WriteLine("Digite seu peso em quilos: ");
+        Peso = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine("Digite sua altura em metros: ");
+        Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        Console.WriteLine("Seu IMC é igual á "+(Peso/(Altura*Altura)).ToString("f2"));
+    }
+}
